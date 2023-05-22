@@ -33,6 +33,7 @@ build: [
 install: [
   [make "install"]
   ["install" "-m" "0755" "ocaml-stub" "%{bin}%/ocaml"] {ocaml:preinstalled}
+  ["install" "-c" "src/findlib/topfind" lib] {os-distribution = "nixos"}
 ]
 depends: [
   "ocaml" {>= "3.08.0"}
