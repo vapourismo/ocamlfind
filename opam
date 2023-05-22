@@ -26,6 +26,7 @@ build: [
     "-no-camlp4" {!ocaml:preinstalled & ocaml:version >= "4.02.0"}
     "-no-topfind" {ocaml:preinstalled}
   ]
+  ["sh" "-c" "echo 'ldconf=\"ignore\"' >> findlib.conf.in"] {os-distribution = "nixos"}
   [make "all"]
   [make "opt"] {ocaml:native}
 ]
